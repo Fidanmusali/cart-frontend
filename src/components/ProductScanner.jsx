@@ -84,7 +84,7 @@ const ProductScanner = () => {
       setIsLookingUp(true);
       setError(null);
 
-      const response = await axios.get("http://localhost:2000/products");
+      const response = await axios.get("https://cart-backend-one.vercel.app/products");
       if (response.data && Array.isArray(response.data)) {
         const foundProduct = response.data.find(product => product.barcode === barcode);
 
